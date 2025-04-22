@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartBeat - Варианты свиданий</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gidole&display=swap" rel="stylesheet">
+    <script src="slider.js" defer></script>
+</head>
+<body>
+    <div class="display_inn">
+        <div class="Logo" onclick="location.href='index.html';" style="cursor:pointer;">
+            <h1>HeartBeat</h1>
+        </div>
+        <nav class="nav">
+            <a class="decortiontext" href="methods.html">Свидания</a>
+            <a class="decortiontext" href="aboutus.html">О нас</a>
+            <a class="decortiontext" href="register_login.php">Авторизация</a>
+        </nav>
+    </div>
+
+    <div class="creative-header">
+        <div class="floating-hearts">
+            <div class="heart heart-1"></div>
+            <div class="heart heart-2"></div>
+            <div class="heart heart-3"></div>
+            <div class="heart heart-4"></div>
+            <div class="heart heart-5"></div>
+            <div class="heart heart-6"></div>
+            <div class="heart heart-7"></div>
+            <div class="heart heart-8"></div>
+            <div class="heart heart-9"></div>
+            <div class="heart heart-10"></div>
+            <div class="heart heart-11"></div>
+            <div class="heart heart-12"></div>
+        </div>
+        <div class="title-container">
+            <h2 class="gradient-text">Варианты свиданий</h2>
+            <div class="sparkle-container">
+                <div class="sparkle"></div>
+                <div class="sparkle"></div>
+                <div class="sparkle"></div>
+                <div class="sparkle"></div>
+                <div class="sparkle"></div>
+            </div>
+            <h4 class="subtitle">Выберите идеальное свидание для вас и вашей половинки</h4>
+        </div>
+    </div>
+
+    <section class="slider">
+        <div class="slider-container">
+            <div class="slider-item active">
+                <img src="brr.jpg" alt="Свидания на природе" class="slider-img">
+                <div class="slider-content">
+                    <h2>Свидания на природе</h2>
+                    <p>Наслаждайтесь романтическим ужином на природе, в уединенном месте, специально подобранном для вас. Мягкие пледы, вкусные закуски и прекрасные виды — все это создаст атмосферу уюта и близости</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="home.png" alt="Свидания дома" class="slider-img">
+                <div class="slider-content">
+                    <h2>Свидания дома</h2>
+                    <p>Свидания дома могут быть уютными, романтичными и полными теплых моментов</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="street.jpg" alt="Свидания на улице" class="slider-img">
+                <div class="slider-content">
+                    <h2>Свидания, прогулки по улице</h2>
+                    <p>Иногда просто прогулка по улице может стать замечательным свиданием</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="sky.jpg" alt="Свидания под красивым небом" class="slider-img">
+                <div class="slider-content">
+                    <h2>Свидания под красивым небом</h2>
+                    <p>Бывает, что просто посмотреть на небо может быть замечательным и незабываемым свиданием</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="far_sky.jpg" alt="Свидания далеко от дома" class="slider-img">
+                <div class="slider-content">
+                    <h2>Свидания далеко от дома</h2>
+                    <p>Поехать со своим любимым человеком на далёкие расстояния может быть замечательным и незабываемым свиданием</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="winter_street.jpg" alt="Свидания зимой" class="slider-img">
+                <div class="slider-content">
+                    <h2>Свидания зимой</h2>
+                    <p>Времена года не имеют значения, главное, что вы вместе. Зимние свидания могут быть замечательными</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-buttons">
+            <button class="slider-button" onclick="showPreviousSlide()">←</button>
+            <button class="slider-button" onclick="showNextSlide()">→</button>
+        </div>
+    </section>
+
+    <script>
+        var parent = document.getElementById("modalParent"),
+            section = document.querySelector("section");
+
+        function openPopup() {
+            parent.style.display = "block";
+            section.style.filter = "none";
+        }
+
+        function closePopup() {
+            parent.style.display = "none";
+            section.style.filter = "none";
+        }
+
+        parent.addEventListener("click", function(e) {
+            if (e.target.className == "modal-parent") {
+                closePopup();
+            }
+        });
+    </script>
+</body>
+</html>
