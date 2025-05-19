@@ -1,3 +1,4 @@
+--Таблица "Partners"--
 CREATE TABLE partners (
     id SERIAL PRIMARY KEY,
     type VARCHAR(20),
@@ -10,6 +11,7 @@ CREATE TABLE partners (
     rating INTEGER
 );
 
+--Таблица product_types--
 CREATE TABLE product_types (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50),
